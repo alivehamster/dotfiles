@@ -1,0 +1,10 @@
+hyprland
+sddm
+uwsm
+swaync
+waybar
+wofi
+pavucontrol
+network-manager-applet
+hyprpaper
+qt6ct-kde

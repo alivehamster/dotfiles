@@ -1,0 +1,8 @@
+sddm
+swaync
+waybar
+wofi
+network-manager-applet
+
+aur:
+swayfx

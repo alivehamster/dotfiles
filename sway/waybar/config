@@ -1,0 +1,128 @@
+{
+  "layer": "bottom",
+  "position": "bottom",
+  "mod": "dock",
+  "exclusive": true,
+  "margin-bottom": -1,
+  "passthrough": false,
+  "height": 41,
+  "modules-left": [
+    "custom/os_button",
+    "wlr/workspaces"
+  ],
+  "modules-center": [
+    "wlr/taskbar"
+  ],
+  "modules-right": [
+    "pulseaudio",
+    "group/hardware",
+    "tray",
+    "custom/notification",
+    "clock"
+  ],
+  "custom/os_button": {
+    "format": "",
+    "on-click": "wofi --show drun",
+    "tooltip": false
+  },
+  "wlr/workspaces": {
+    "on-click": "activate",
+    "persistent-workspaces": {
+      "*": 3
+    }
+  },
+  "wlr/taskbar": {
+    "format": "{icon} {title:.17}",
+    "icon-size": 28,
+    "spacing": 3,
+    "on-click-middle": "close",
+    "tooltip-format": "{title}",
+    "ignore-list": [],
+    "on-click": "activate",
+    "on-click-right": "close"
+  },
+  "pulseaudio": {
+    "format": "{icon}  {volume}%",
+    "format-bluetooth": "{volume}% {icon} {format_source}",
+    "format-bluetooth-muted": " {icon} {format_source}",
+    "format-muted": " {format_source}",
+    "format-source": "{volume}% ",
+    "format-source-muted": "",
+    "format-icons": {
+      "headphone": " ",
+      "hands-free": " ",
+      "headset": " ",
+      "phone": " ",
+      "portable": " ",
+      "car": " ",
+      "default": [
+        "",
+        "",
+        ""
+      ]
+    },
+    "on-click": "pavucontrol"
+  },
+  "custom/system": {
+    "format": "",
+    "tooltip": false
+  },
+  "cpu": {
+    "format": "/ 󰻠 {usage}% "
+  },
+  "memory": {
+    "format": "/ 󰍛 {}% "
+  },
+  "disk": {
+    "interval": 30,
+    "format": "󰋊 {percentage_used}% ",
+    "path": "/"
+  },
+  "sway/language": {
+    "format": "/ 󰗊 {short}"
+  },
+  "group/hardware": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 300,
+      "children-class": "not-memory",
+      "transition-left-to-right": false
+    },
+    "modules": [
+      "custom/system",
+      "disk",
+      "cpu",
+      "memory",
+      "sway/language"
+    ]
+  },
+  "tray": {
+    "icon-size": 21,
+    "spacing": 10
+  },
+  "custom/notification": {
+    "tooltip-format": "Left: Notifications\nRight: Do not disturb",
+    "format": "{icon}",
+    "format-icons": {
+      "notification": "<span rise='8pt'><span foreground='red'><sup></sup></span></span>",
+      "none": "",
+      "dnd-notification": "<span rise='8pt'><span foreground='red'><sup></sup></span></span>",
+      "dnd-none": "",
+      "inhibited-notification": "<span rise='8pt'><span foreground='red'><sup></sup></span></span>",
+      "inhibited-none": "",
+      "dnd-inhibited-notification": "<span rise='8pt'><span foreground='red'><sup></sup></span></span>",
+      "dnd-inhibited-none": ""
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
+  },
+  "clock": {
+    "format": "{:%H:%M %a}",
+    "timezone": "",
+    "tooltip": false
+  }
+}
