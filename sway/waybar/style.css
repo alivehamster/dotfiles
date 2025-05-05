@@ -50,7 +50,7 @@ window#waybar {
   opacity: 0.4;
 }
 
-#workspaces button.active {
+#workspaces button.focused {
   color: white;
   background: rgba(100, 100, 100, 0.5);
   border-radius: 15px;
@@ -131,6 +131,16 @@ window#waybar {
 
 #language {
   margin-right: 10px;
+}
+
+#battery {
+    background-color: rgba(100, 100, 100, 0.5);
+    font-size: 16px;
+    color: white;
+    border-radius: 15px;
+    padding: 2px 15px 0px 10px;
+    margin: 5px 10px 5px 0px;
+    opacity:0.8;
 }
 
 #custom-notification {

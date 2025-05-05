@@ -1,8 +1,10 @@
 sddm
+alacritty
 swaync
 waybar
 wofi
 network-manager-applet
+xorg-xwayland
 
 aur:
 swayfx
