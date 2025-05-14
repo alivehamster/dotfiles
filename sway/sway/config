@@ -31,7 +31,7 @@ set $menu wofi --show drun
 #
 # Example configuration:
 #
-input "2362:4918:UNIW0001:00_093A:1336_Touchpad" {
+input "type:touchpad" {
     dwt enabled
     tap enabled
     natural_scroll enabled
