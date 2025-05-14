@@ -8,7 +8,7 @@
   "height": 41,
   "modules-left": [
     "custom/os_button",
-    "sway/workspaces",
+    "hyprland/workspaces",
     "wlr/taskbar"
   ],
   "modules-center": [],
@@ -25,8 +25,9 @@
     "on-click": "wofi --show drun",
     "tooltip": false
   },
-  "sway/workspaces": {
-    "on-click": "activate",
+  "hyprland/workspaces": {
+    "on-scroll-up": "hyprctl dispatch workspace r-1",
+    "on-scroll-down": "hyprctl dispatch workspace r+1",
     "persistent-workspaces": {
       "1": [],
       "2": [],
@@ -70,18 +71,18 @@
     "tooltip": false
   },
   "cpu": {
-    "format": "/ 󰻠 {usage}% "
+    "format": "/ 󰻠 {usage}% ",
+    "on-click": "plasma-systemmonitor"
   },
   "memory": {
-    "format": "/ 󰍛 {}% "
+    "format": "/ 󰍛 {}% ",
+    "on-click": "plasma-systemmonitor"
   },
   "disk": {
     "interval": 30,
     "format": "󰋊 {percentage_used}% ",
-    "path": "/"
-  },
-  "sway/language": {
-    "format": "/ 󰗊 {short}"
+    "path": "/",
+    "on-click": "plasma-systemmonitor"
   },
   "group/hardware": {
     "orientation": "inherit",
@@ -94,15 +95,14 @@
       "custom/system",
       "disk",
       "cpu",
-      "memory",
-      "sway/language"
+      "memory"
     ]
   },
   "tray": {
     "icon-size": 21,
     "spacing": 10
   },
-  "battery": {
+    "battery": {
     "states": {
       "warning": 30,
       "critical": 15

@@ -1,0 +1,8 @@
+hyprland
+alacritty
+swaync
+waybar
+wofi
+pavucontrol
+network-manager-applet
+hyprpaper
