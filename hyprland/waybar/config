@@ -90,9 +90,7 @@
     "path": "/",
     "on-click": "plasma-systemmonitor"
   },
-  "hyprland/language": {
-    "format": "/ 󰗊 {short}"
-  },
+
   "group/hardware": {
     "orientation": "inherit",
     "drawer": {
@@ -104,8 +102,7 @@
       "custom/system",
       "disk",
       "cpu",
-      "memory",
-      "hyprland/language"
+      "memory" 
     ]
   },
   "tray": {

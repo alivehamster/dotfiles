@@ -3,6 +3,20 @@ alacritty
 swaync
 waybar
 wofi
-pavucontrol
-network-manager-applet
 hyprpaper
+xdg-desktop-portal-hyprland
+xdg-desktop-portal-gtk
+hyprpolkitagent
+qt5-wayland
+qt6-wayland
+
+# Network
+networkmanager
+network-manager-applet
+
+# Audio
+pipewire
+wireplumber
+pipewire-pulse
+pipewire-alsa
+pavucontrol
