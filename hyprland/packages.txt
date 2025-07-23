@@ -1,10 +1,31 @@
+# Desktop
 hyprland
 sddm
 uwsm
 swaync
 waybar
 wofi
-pavucontrol
-network-manager-applet
 hyprpaper
-qt6ct-kde
+xdg-desktop-portal-hyprland
+xdg-desktop-portal-gtk
+hyprpolkitagent
+
+qt5-wayland
+qt6-wayland
+
+# qt6ct-kde
+
+# Network
+networkmanager
+network-manager-applet
+
+
+# Audio
+pipewire
+wireplumber
+pipewire-pulse
+pipewire-alsa
+pavucontrol
+
+# misc
+copyq
