@@ -45,11 +45,11 @@
     "on-click-right": "close"
   },
   "pulseaudio": {
-    "format": "{icon}  {volume}%",
-    "format-bluetooth": "{volume}% {icon} {format_source}",
-    "format-bluetooth-muted": " {icon} {format_source}",
-    "format-muted": " {format_source}",
-    "format-source": "{volume}% ",
+    "format": "{icon} {volume}% {format_source}",
+    "format-bluetooth": "{icon} {volume}%  {format_source}",
+    "format-bluetooth-muted": "{icon} 󰖁  {format_source}",
+    "format-muted": "󰖁 {format_source}",
+    "format-source": "",
     "format-source-muted": "",
     "format-icons": {
       "headphone": " ",
@@ -60,27 +60,27 @@
       "car": " ",
       "default": [
         "",
-        "",
+        "",
         ""
       ]
     },
     "on-click": "pavucontrol"
   },
   "custom/system": {
-    "format": "",
+    "format": "",
     "tooltip": false
   },
   "cpu": {
-    "format": "/ 󰻠 {usage}% ",
+    "format": " {usage}% ",
     "on-click": "plasma-systemmonitor"
   },
   "memory": {
-    "format": "/ 󰍛 {}% ",
+    "format": "/  {}% ",
     "on-click": "plasma-systemmonitor"
   },
   "disk": {
     "interval": 30,
-    "format": "󰋊 {percentage_used}% ",
+    "format": "/ 󰋊 {percentage_used}% ",
     "path": "/",
     "on-click": "plasma-systemmonitor"
   },
@@ -93,9 +93,9 @@
     },
     "modules": [
       "custom/system",
-      "disk",
       "cpu",
-      "memory"
+      "memory",
+      "disk"
     ]
   },
   "tray": {
